@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Form, Input, Label } from './FormInputContact.styled';
+import { Form, Input, Label, Button } from './FormInputContact.styled';
 
 class FormInputContact extends Component {
   state = {
@@ -48,7 +48,7 @@ class FormInputContact extends Component {
             required
           />
         </Label>
-        <button type="submit">Add contact</button>
+        <Button type="submit">Add contact</Button>
       </Form>
     );
   }

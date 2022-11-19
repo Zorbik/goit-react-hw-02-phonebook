@@ -20,3 +20,19 @@ export const Input = styled.input`
 export const Label = styled.label`
   width: ${p => p.theme.sizes.normal};
 `;
+
+export const Button = styled.button`
+  box-shadow: ${p => p.theme.shadows.normal};
+  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.blue};
+  border-radius: ${p => p.theme.radii.normal};
+  height: ${p => p.theme.space[5]}px;
+  background-color: ${p => p.theme.colors.blue};
+  color: ${p => p.theme.colors.white};
+  padding: ${p => p.theme.space[3]}px;
+  :hover,
+  :focus {
+    background-color: ${p => p.theme.colors.white};
+    color: ${p => p.theme.colors.blue};
+  }
+  transition: color 250ms linear, background-color 250ms linear;
+`;

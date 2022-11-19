@@ -4,17 +4,24 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${p => p.theme.space[4]}px;
+  gap: ${p => p.theme.space[3]}px;
   width: ${p => p.theme.sizes.normal};
 `;
 
 export const Input = styled.input`
+  box-sizing: border-box;
   width: ${p => p.theme.sizes.normal};
-  height: ${p => p.theme.space[4]}px;
+  height: ${p => p.theme.space[5]}px;
   padding: ${p => p.theme.space[1]}px;
+  margin-top: ${p => p.theme.space[3]}px;
+
   border-radius: ${p => p.theme.radii.normal};
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.blue};
   box-shadow: ${p => p.theme.shadows.normal};
+  :focus-visible {
+    outline: 2px double ${p => p.theme.colors.blue};
+    outline-offset: 1.5px;
+  }
 `;
 
 export const Label = styled.label`
@@ -29,6 +36,7 @@ export const Button = styled.button`
   background-color: ${p => p.theme.colors.blue};
   color: ${p => p.theme.colors.white};
   padding: ${p => p.theme.space[3]}px;
+  cursor: pointer;
   :hover,
   :focus {
     background-color: ${p => p.theme.colors.white};

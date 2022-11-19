@@ -4,7 +4,7 @@ import { Box } from '../Box';
 
 export function ContactsList({ options, onDeleteContact }) {
   return (
-    <Box as="ul" px={3}>
+    <Box as="ul" px={3} mb={0}>
       {options &&
         options.map(({ id, name, number }) => (
           <Contact

@@ -5,6 +5,6 @@ export const ContactItem = styled.li`
   gap: ${p => p.theme.space[4]}px;
   justify-content: space-between;
   align-items: center;
-  margin: ${p => p.theme.space[3]}px;
+  margin-top: ${p => p.theme.space[3]}px;
   font-size: ${p => p.theme.fontSizes[1]}px;
 `;

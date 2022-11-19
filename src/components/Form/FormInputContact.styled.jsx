@@ -14,13 +14,13 @@ export const Input = styled.input`
   height: ${p => p.theme.space[5]}px;
   padding: ${p => p.theme.space[1]}px;
   margin-top: ${p => p.theme.space[3]}px;
-
   border-radius: ${p => p.theme.radii.normal};
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.blue};
   box-shadow: ${p => p.theme.shadows.normal};
+
   :focus-visible {
-    outline: 2px double ${p => p.theme.colors.blue};
-    outline-offset: 1.5px;
+    outline: ${p => p.theme.borders.normal} ${p => p.theme.colors.blue};
+    outline-offset: 1px;
   }
 `;
 

@@ -12,7 +12,11 @@ class App extends Component {
   };
 
   onFormSubmit = data => {
-    if (this.state.contacts.find(contact => contact.name === data.name)) {
+    if (
+      this.state.contacts.find(
+        contact => contact.name.toLowerCase() === data.name.toLowerCase()
+      )
+    ) {
       alert(`${data.name} is alredy in contacts!`);
     } else this.setState({ contacts: [...this.state.contacts, data] });
   };
@@ -37,16 +41,18 @@ class App extends Component {
 
   render() {
     const visibleContacts = this.getVisibleContacts();
+    const { filter } = this.state;
     return (
       <Box width="px" mx="auto" my={5} p={4} boxShadow="normal">
         <Section title="Phonebook">
           <FormInputContact onSubmit={this.onFormSubmit} />
         </Section>
         <Section title="Contacts">
-          <Filter
-            value={this.state.filter}
-            onChange={this.changeFilterHandler}
-          />
+          {visibleContacts.length ? (
+            <Filter value={filter} onChange={this.changeFilterHandler} />
+          ) : (
+            ''
+          )}
           <ContactsList
             options={visibleContacts}
             onDeleteContact={this.deleteContact}
